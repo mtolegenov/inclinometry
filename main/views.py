@@ -19,6 +19,6 @@ def excel_file(request):
         excel_f = get_data_from_file_in_memory(request.FILES['document'])
         excel_byte = request.FILES['document']
         mail = request.POST.get('mail')
-        print(1)
+        print("SECOND COMMIT")
         return HttpResponse(main(mail, excel_f, excel_byte))
     return render(request, 'main/index.html')
